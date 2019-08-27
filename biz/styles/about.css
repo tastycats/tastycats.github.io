@@ -65,6 +65,12 @@ section.messages blockquote {
     font-size: 1.2em;
 }
 
+.graph-info {
+    font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: lighter;   
+}
+
 div.company-name {
     text-align: right;
     padding: 1em 1em 0 0;
