@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Livvic', Helvetica, sans-serif;
+    background: url("https://picsum.photos/1600/1200?random=1") no-repeat center center fixed;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+}
+
+a {
+    color: #000;
+}
+
+.header-container {
+    background-color: #ffde03;
+    /* box-shadow: 0.4em 0.4em 1em 0 rgba(0,0,0,.1); */
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.header-container ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.header-container li a {
+    display: block;
+    padding: 1em 1em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.header-container li a:hover,
+.header-container .check-collapse:hover {
+    background-color: #b49c00;
+}
+
+.header-container .title-container {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+}
+
+.header-container .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header-container .check-label {
+    cursor: pointer;
+    float: right;
+    padding: 2em 2em;
+    position: relative;
+    transition: 0.3s ease background;
+}
+
+.header-container .check-label .navicon {
+    background: transparent;
+    display: block;
+    height: .2em;
+    position: relative;
+    transition: .3s ease all;
+    width: 1em;
+}
+
+.header-container .check-label .navicon::before,
+.header-container .check-label .navicon::after {
+    background: #000;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: .3s ease all;
+    width: 100%;
+}
+
+.header-container .check-label .navicon::before {
+    top: .2em;
+}
+
+.header-container .check-label .navicon::after {
+    top: -.2em;
+}
+
+.header-container .check-collapse {
+    display: none;
+}
+
+.header-container .check-collapse:checked ~ .menu {
+    max-height: 20em;
+}
+
+.header-container .check-collapse:checked ~ .check-label {
+    background: #aa8801;
+}
+
+.header-container .check-collapse:checked ~ ul {
+    /* filter: blur(0.3em); */
+    background: #ffde03;
+}
+
+.header-container .check-collapse:checked ~ .check-label .navicon {
+    background: transparent;
+}
+
+.header-container .check-collapse:checked ~ .check-label .navicon::before {
+    transform: rotate(-45deg);
+}
+
+.header-container .check-collapse:checked ~ .check-label .navicon::after {
+    transform: rotate(45deg);
+}
+
+.header-container .check-collapse:checked ~ .check-label .navicon::before,
+.header-container .check-collapse:checked ~ .check-label .navicon::after {
+    top: 0;
+}
+
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container em {
+    font-size: 3em;
+    font-family: 'Livvic', Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    color: aliceblue;
+    text-align: center;
+    padding: 0 1em;
+}
+
+footer.page-end {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    position: absolute;
+    top: 100vh;
+    justify-content: center;
+    background: #ffde03;
+}
+
+footer.page-end h3 {
+    font-size: .8em;
+    text-align: center;
+    padding: .4em .4em;
+}
+
+@media (min-width: 768px) {
+    .header-container li {
+        float: left;
+    }
+    .header-container li a {
+        padding: 1.6em 1.6em;
+    }
+    .header-container .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header-container .check-label {
+        display: none;
+    }
+}

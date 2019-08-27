@@ -1,0 +1,98 @@
+body {
+    background: #f9f9f9;
+}
+
+.header-container {
+    position: absolute;
+}
+
+.main-container {
+    background: transparent;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    top: 4em;
+    justify-content: stretch;
+    align-items: flex-start;
+}
+
+.main-container .data {
+    flex-basis: 40%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: 0 1em;
+    /* padding: 1em 0; */
+}
+
+.main-container .data svg {
+    height: 20em;
+    background: white;
+    margin: 1em 0;
+}
+
+.main-container .data .graph-info{
+    /* margin: 1em 0; */
+}
+
+section.messages {
+    flex-basis: 60%;
+    display: flex;
+    flex-flow: column;
+    margin: 0 1em;
+}
+
+section.messages h3, section.data h3 {
+    font-size: 2em;
+    font-weight: lighter;
+    font-family: 'Livvic', Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+}
+
+section.messages article {
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1em 0;
+    margin: .3em 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+section.messages blockquote {
+    font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+
+div.company-name {
+    text-align: right;
+    padding: 1em 1em 0 0;
+}
+
+section.messages article .company-name {
+    height: 20px;
+    border-top: 2px solid #e7e7e7;
+}
+
+div.bar-chart {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+footer.page-end {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    top: 4em;
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        flex-flow: row;
+    }
+}
+

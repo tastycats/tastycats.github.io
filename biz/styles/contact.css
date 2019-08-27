@@ -1,0 +1,91 @@
+.main-container {
+    min-height: 80vh;
+    position: relative;
+}
+
+.contact-form {
+    background: #880e4f;
+    min-height: 20vh;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    z-index: 5;
+}
+
+.contact-form h4 {
+    text-align: center;
+    font-family: 'Livvic', Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: white;
+    padding: .4em 1em;
+}
+
+.contact-form form {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+.contact-form form * {
+    font-family: 'Livvic', Arial, Helvetica, sans-serif;
+    margin: .2em 1em;
+    border-radius: .1em;
+    font-size: 1.2em;
+    border: none;
+    padding: .3em;
+}
+
+.contact-form form input[type="submit"] {
+    align-self: flex-start;
+    padding: .3em;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+.contact-form form input[type="submit"]:hover {
+    background: #f9f9f9;
+    box-shadow: 0 0 .2em .2em rgba(0,0,0,0.2);
+}
+
+footer.page-end {
+    display: flex;
+    background: #ad1457;
+    position: relative;
+    top: unset;
+}
+
+@media (min-width: 768px) {
+    .contact-form {
+        background: #880e4f;
+        min-height: 20vh;
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        z-index: 5;
+    }
+    
+    .contact-form h4 {
+        text-align: center;
+        font-family: 'Livvic', Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+        color: white;
+        padding: .4em 1em;
+    }
+    
+    .contact-form form {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+    }
+    
+    .contact-form form * {
+        font-family: 'Livvic', Arial, Helvetica, sans-serif;
+        margin: .2em 1em;
+        border-radius: .1em;
+        font-size: 1.5em;
+        border: none;
+        padding: .5em;
+    }   
+}
