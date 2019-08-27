@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Washed up Aerospace Engineer tries something new">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    <link href="https://fonts.googleapis.com/css?family=Livvic:300&display=swap" rel="stylesheet"> <script src="/assets/d3.v3.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet"> <script>
+        window.addEventListener('load', initGraph);
+        
+        const revs = [
+            3, 5, 11, 34, 78, 112, 137
+        ]
+
+        function initGraph(){
+            const containers = d3.select('.bar-chart')
+            .selectAll("g")
+            .data(revs)
+            .enter()
+            .append("g")
+            .attr('transform', function(d, i){
+                return "translate(" + i*12 + ", 0)"
+            });
+            
+            containers.append("rect")
+            .attr("y", function(d){return 320 - d*3;})
+            .attr("height", function(d){return d*3;})
+            .attr("width", 10)
+            .attr('fill', 'green');
+        }
+    </script>
+    <title>Yatp</title>
+</head>
+<body>
+    <header class="header-container">
+        <a href="/" class="title-container">Yatp</a>
+        <input class="check-collapse" type="checkbox" id="check-collapse" />
+        <label class="check-label" for="check-collapse"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </header>
+    
+    <main class="main-container">
+        <section class="messages">
+            <h3>
+                What our clients are saying about us...
+            </h3>
+            <article>
+                <blockquote>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, odio!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, eos.
+                </blockquote>
+                <div class="company-name">Lattoos</div>
+            </article>
+            <article>
+                <blockquote>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, doloremque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, libero.
+                </blockquote>
+                <div class="company-name">TumblingCat</div>
+            </article>
+            <article>
+                <blockquote>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, atque? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, atque?
+                </blockquote>
+                <div class="company-name">BrutalSavageRekt</div>
+            </article>
+            <article>
+                <blockquote>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, cupiditate. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, cupiditate.
+                </blockquote>
+                <div class="company-name">NippyKindLangur</div>
+            </article>
+        </section>
+        <section class="data">
+            <h3>
+                Our growth
+            </h3>
+            <svg class="bar-chart"></svg>
+            <article class="graph-info">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nulla aut, aspernatur harum quaerat pariatur, vel commodi dolor aperiam voluptatem libero similique officiis eius veritatis delectus illum. Provident, repudiandae optio dicta sapiente maiores id eos, quibusdam, nemo nisi repellendus aliquid.
+                </p>
+            </article>
+        </section>
+    </main>
+    
+    <footer class="page-end">
+        <h3>
+            Copyright info and other severely consequential stuff
+        </h3>
+    </footer>
+</body>
+</html>
