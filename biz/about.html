@@ -22,13 +22,13 @@
             .enter()
             .append("g")
             .attr('transform', function(d, i){
-                return "translate(" + i*12 + ", 0)"
+                return "translate(" + i*40 + ", 0)"
             });
             
             containers.append("rect")
-            .attr("y", function(d){return 320 - d*3;})
-            .attr("height", function(d){return d*3;})
-            .attr("width", 10)
+            .attr("y", function(d){return 320 - d*2;})
+            .attr("height", function(d){return d*2;})
+            .attr("width", 18)
             .attr('fill', 'green');
         }
     </script>

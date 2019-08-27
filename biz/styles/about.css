@@ -51,7 +51,7 @@ section.messages h3, section.data h3 {
 }
 
 section.messages article {
-    border-radius: 3px;
+    border-radius: .3em;
     background: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 1em 0;
