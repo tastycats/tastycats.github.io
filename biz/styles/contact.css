@@ -5,42 +5,40 @@
 
 .contact-form {
     background: #880e4f;
-    min-height: 20vh;
-    position: relative;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    min-height: 20vh;
     padding-bottom: 2em;
+    position: relative;
     z-index: 5;
 }
-
-.contact-form h4 {
-    text-align: center;
+.heading-four {
+    color: white;
     font-family: 'Livvic', Arial, Helvetica, sans-serif;
     font-weight: lighter;
-    color: white;
     padding: .4em 1em;
+    text-align: center;
 }
-
 .contact-form form {
     display: flex;
     flex-flow: column;
-    justify-content: space-evenly;
 }
-
-.contact-form form * {
-    font-family: 'Livvic', Arial, Helvetica, sans-serif;
-    margin: .2em 1em;
+/* csslint ignore:start */
+.contact-form form > * {
     border-radius: .1em;
-    font-size: 1.2em;
     border: none;
+    font-family: 'Livvic', Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    margin: .2em 1em;
     padding: .3em;
 }
+/* csslint ignore:end */
 
 .contact-form form input[type="submit"] {
     align-self: flex-start;
-    padding: .3em;
     cursor: pointer;
+    padding: .3em;
     transition: 0.3s ease all;
 }
 
@@ -49,9 +47,9 @@
     box-shadow: 0 0 .2em .2em rgba(0,0,0,0.2);
 }
 
-footer.page-end {
-    display: flex;
+.page-end {
     background: #ad1457;
+    display: flex;
     position: relative;
     top: unset;
 }
@@ -59,34 +57,37 @@ footer.page-end {
 @media (min-width: 768px) {
     .contact-form {
         background: #880e4f;
-        min-height: 20vh;
-        position: relative;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
+        min-height: 20vh;
+        position: relative;
         z-index: 5;
     }
-    
-    .contact-form h4 {
-        text-align: center;
+    .heading-four {
+        color: white;
         font-family: 'Livvic', Arial, Helvetica, sans-serif;
         font-weight: lighter;
-        color: white;
         padding: .4em 1em;
+        text-align: center;
     }
     
     .contact-form form {
         display: flex;
         flex-flow: column;
+        /* csslint ignore:start */
         justify-content: space-evenly;
+        /* csslint ignore:end */
     }
-    
+
+    /* csslint ignore:start */
     .contact-form form * {
-        font-family: 'Livvic', Arial, Helvetica, sans-serif;
-        margin: .2em 1em;
-        border-radius: .1em;
-        font-size: 1.5em;
         border: none;
+        border-radius: .1em;
+        font-family: 'Livvic', Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+        margin: .2em 1em;
         padding: .5em;
-    }   
+    }
+    /* csslint ignore:end */   
 }

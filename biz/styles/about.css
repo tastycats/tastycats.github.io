@@ -7,57 +7,50 @@ body {
 }
 
 .main-container {
+    align-items: flex-start;
     background: transparent;
     display: flex;
     flex-flow: column;
     position: relative;
     top: 4em;
-    justify-content: stretch;
-    align-items: flex-start;
 }
 
 .main-container .data {
-    flex-basis: 40%;
     display: flex;
+    flex-basis: 40%;
     flex-flow: column;
     justify-content: center;
     margin: 0 1em;
-    /* padding: 1em 0; */
 }
 
 .main-container .data svg {
-    height: 20em;
     background: white;
+    height: 20em;
     margin: 1em 0;
 }
 
-.main-container .data .graph-info{
-    /* margin: 1em 0; */
-}
-
 section.messages {
-    flex-basis: 60%;
     display: flex;
+    flex-basis: 60%;
     flex-flow: column;
     margin: 0 1em;
 }
 
-section.messages h3, section.data h3 {
+h3 {    
+    font-family: 'Livvic', Arial, Helvetica, sans-serif;
     font-size: 2em;
     font-weight: lighter;
-    font-family: 'Livvic', Arial, Helvetica, sans-serif;
     text-align: center;
-    
 }
 
 section.messages article {
-    border-radius: .3em;
     background: #fff;
+    border-radius: .3em;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1em 0;
-    margin: .3em 0;
     display: flex;
     flex-flow: column nowrap;
+    margin: .3em 0;
+    padding: 1em 0;
 }
 
 section.messages blockquote {
@@ -72,28 +65,35 @@ section.messages blockquote {
 }
 
 div.company-name {
-    text-align: right;
     padding: 1em 1em 0 0;
+    text-align: right;
 }
 
 section.messages article .company-name {
-    height: 20px;
+    /* csslint ignore:start */    
     border-top: 2px solid #e7e7e7;
+    /* csslint ignore:end */    
+    height: 20px;
 }
 
-div.bar-chart {
+.bar-chart {
+    align-items: flex-end;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    align-items: flex-end;
 }
 
-footer.page-end {
-    width: 100%;
+.page-end {
     display: flex;
     flex-flow: column nowrap;
     position: relative;
     top: 4em;
+    width: 100%;
+}
+
+.copyright {
+    font-size: .8em;
+    font-weight: bold;
 }
 
 @media (min-width: 768px) {

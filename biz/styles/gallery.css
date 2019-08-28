@@ -4,149 +4,72 @@ body {
 }
 
 main.gallery-main {
-    width: 100%;
     display: flex;
     flex-flow: column;
+    width: 100%;
 }
 
-main.gallery-main section.we-do {
-    width: 100%;
-    height: 20em;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://picsum.photos/1600/1200?random=1");
-    background-size: cover;
+main.gallery-main .we-do {
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://picsum.photos/1600/1200?random=1&blur=3");
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-flow: row;
+    height: 20em;
     justify-content: center;
-    align-items: center;
+    width: 100%;
 }
 
-section.we-do h2 {
+h2 {
+    color: white;
     font-size: 2.5em;
     text-align: center;
-    color: white;
-}
-
-section.grid-container .one-img {
-    /* background: url("https://picsum.photos/800/600?random=2") center center no-repeat; */
-    height: 10em;
-    background-size: cover;
 }
 
 section.grid-container .one-img img {
+    height: 100%;
     object-fit: cover;
     width: 100%;
-    height: 100%;
 
 }
 
-footer.page-end {
-    width: 100%;
+.page-end {
     display: flex;
     flex-flow: column nowrap;
-    top: unset;
     position: unset;
+    top: unset;
+    width: 100%;
 }
 
 @media (max-width: 767px) {
     section.grid-container {
         display: flex;
-        /* grid-template-rows: 10em; */
         flex-flow: column;
     }
-    
-    .grid-container .l1-container {
-        display: flex;
-        flex-flow: column;
-        /* flex-basis: 100%; */
-        /* height: 15em; */
-    }
-    
-    .grid-container > .l1-container:first-child .l2-container:first-child {
-        display: flex;
-        /* flex-basis: 100%; */
-        flex-shrink: 0;
-        flex-flow: column;
-    }
-    
-    .grid-container > .l1-container:first-child .l2-container:nth-child(2) {
-        display: flex;
-        /* flex-basis: 100%; */
-        flex-shrink: 0;
-        flex-flow: column;
-    }
-    
-    /* .grid-container > .l1-container:first-child .l2-container:nth-child(2) .l3-container:first-child {
-        display: flex;
-        flex-basis: 100%;
-        flex-shrink: 0;
-        flex-flow: column nowrap;    
-    } */
-    
-    .grid-container > .l1-container:first-child .l2-container:nth-child(2) .one-img {
+
+    section.one-img {
         height: 20em;
     }
     
-    .grid-container > .l1-container:first-child .l2-container:first-child .one-img {
-        height: 20em;
-    }
-    
-    .grid-container > .l1-container:nth-child(2) {
-        display: flex;
-        /* flex-basis: 100%; */
-        flex-flow: column;
-    }
-    
-    .grid-container > .l1-container:nth-child(2) .one-img {
-        height: 20em;
-    }
-    
-    .grid-container > .l1-container:nth-child(3) {
-        display: flex;
-        flex-flow: column;
-        /* flex-basis: 100%; */
-    }
-    
-    .grid-container > .l1-container:nth-child(3) > .l2-container:first-child {
+    .l1-container, .l2-container, .l3-container {
         display: flex;
         flex-flow: column nowrap;
-        /* flex-basis: 100%; */
-    }
-    
-    .grid-container > .l1-container:nth-child(3) > .l2-container:first-child  .l3-container{
-        /* flex-basis: 100%; */
-        display: flex;
-        flex-flow: column nowrap;
-    }
-    
-    .grid-container > .l1-container:nth-child(3) > .l2-container:first-child  .l3-container .one-img {
-        height: 20em;
-        
-    }
-    
-    .grid-container > .l1-container:nth-child(3) > .l2-container:nth-child(2) {
-        display: flex;
-        flex-flow: column nowrap;
-        /* flex-basis: 100%; */
-    }
-    .grid-container > .l1-container:nth-child(3) > .l2-container:nth-child(2) .one-img {
-        height: 20em;
+        flex-shrink: 0;
     }
 }
 
 @media (min-width: 768px) {
     section.grid-container {
         display: flex;
-        /* grid-template-rows: 10em; */
         flex-flow: column nowrap;
     }
     
     .grid-container .l1-container {
         display: flex;
-        flex-flow: row nowrap;
         flex-basis: 100%;
-        /* height: 15em; */
+        flex-flow: row nowrap;
     }
     
     .grid-container > .l1-container:first-child .l2-container:first-child {
@@ -159,24 +82,17 @@ footer.page-end {
     .grid-container > .l1-container:first-child .l2-container:nth-child(2) {
         display: flex;
         flex-basis: 25%;
-        flex-shrink: 0;
         flex-flow: column nowrap;
-    }
-    
-    /* .grid-container > .l1-container:first-child .l2-container:nth-child(2) .l3-container:first-child {
-        display: flex;
-        flex-basis: 100%;
         flex-shrink: 0;
-        flex-flow: column nowrap;    
-    } */
+    }
     
     .grid-container > .l1-container:first-child .l2-container:nth-child(2) .one-img {
         height: 12em;
     }
     
     .grid-container > .l1-container:first-child .l2-container:first-child .one-img {
-        height: 24em;
         flex-basis: 100%;
+        height: 24em;
     }
     
     .grid-container > .l1-container:nth-child(2) {
@@ -192,19 +108,19 @@ footer.page-end {
     
     .grid-container > .l1-container:nth-child(3) {
         display: flex;
-        flex-flow: row nowrap;
         flex-basis: 100%;
+        flex-flow: row nowrap;
     }
     
     .grid-container > .l1-container:nth-child(3) > .l2-container:first-child {
         display: flex;
-        flex-flow: column nowrap;
         flex-basis: 50%;
+        flex-flow: column nowrap;
     }
     
     .grid-container > .l1-container:nth-child(3) > .l2-container:first-child  .l3-container{
-        flex-basis: 100%;
         display: flex;
+        flex-basis: 100%;
         flex-flow: row nowrap;
     }
     
@@ -216,11 +132,11 @@ footer.page-end {
     
     .grid-container > .l1-container:nth-child(3) > .l2-container:nth-child(2) {
         display: flex;
-        flex-flow: column nowrap;
         flex-basis: 50%;
+        flex-flow: column nowrap;
     }
     .grid-container > .l1-container:nth-child(3) > .l2-container:nth-child(2) .one-img {
-        height: 10em;
         flex-basis: 100%;
+        height: 10em;
     }
 }
