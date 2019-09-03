@@ -1,0 +1,22 @@
+{
+    "heroes" : [
+        {
+            "name": "Blast",
+            "rank": 1,
+            "class": "S",
+            "nick": ""
+        },
+        {
+            "name": "Tatsumaki",
+            "rank": 2,
+            "class": "S",
+            "nick": "Terrible Tornado"
+        },
+        {
+            "name": "Bang",
+            "rank": 3,
+            "class": "S",
+            "nick": "Silverfang"
+        }
+    ]    
+}
