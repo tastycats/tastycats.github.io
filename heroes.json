@@ -4,19 +4,22 @@
             "name": "Blast",
             "rank": 1,
             "class": "S",
-            "nick": ""
+            "nick": "",
+            "avatar": "https://vignette.wikia.nocookie.net/onepunchman/images/a/ab/Blast334.jpg/revision/latest/scale-to-width-down/310?cb=20190706233806"
         },
         {
             "name": "Tatsumaki",
             "rank": 2,
             "class": "S",
-            "nick": "Terrible Tornado"
+            "nick": "Terrible Tornado",
+            "avatar": "https://vignette.wikia.nocookie.net/onepunchman/images/d/d2/Tatsumaki_Manga.png/revision/latest/scale-to-width-down/310?cb=20190819111810"
         },
         {
             "name": "Bang",
             "rank": 3,
             "class": "S",
-            "nick": "Silverfang"
+            "nick": "Silverfang",
+            "avatar": "https://vignette.wikia.nocookie.net/onepunchman/images/1/14/BangColoredMangaAvi.png/revision/latest/scale-to-width-down/310?cb=20160112184059"
         }
     ]    
 }
